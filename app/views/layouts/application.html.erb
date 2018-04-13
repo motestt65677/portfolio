@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <div id="flash">
+    <% flash.each do |key, value| -%>
+      <% if key == "success"%>
+        <div id="flash_<%= key %>" class="alert alert-success" role="alert"><%=h value %></div>
+      <% else %>
+        <div id="flash_<%= key %>" class="alert alert-danger" role="alert"><%=h value %></div>
+      <% end %>
+    <% end %>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<div class="section-1">
+  <div class="container align-center">
+    <div class="row">
+      <div class="col-12">
+        <h1>David Cheng</h1>
+        <h5>Full Stack Web Developer</h5>
+        <%= link_to 'Resume', 'davidchengresume-april.pdf', download: 'davidchengresume-april.pdf', class:"col-6 col-lg-3"%>
+        <a class="col-6 col-lg-3" href="#contact-me">Contact me</a>
+      </div>
+      <div class="col-12 mt-3"> 
+        <%=image_tag "david.jpg", class:"profile-pic img-thumbnail"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="section-2 align-center mt-5">
+  <div class="container">
+    <h1>My Skills</h1>
+    <hr>
+    <h4>Front End</h4>
+      <div class="row">
+        <div class="col-4 col-lg-2">
+          <%=image_tag "html.svg", class:"skill-set img-thumbnail"%>
+          <p>HTML 5</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "css.svg", class:"skill-set img-thumbnail"%>
+          <p>CSS 3</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "javascript.svg", class:"skill-set img-thumbnail"%>
+          <p>Javascript</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "jquery.svg", class:"skill-set img-thumbnail"%>
+          <p>JQuery</p>
+        </div>        
+        <div class="col-4 col-lg-2">
+          <%=image_tag "bootstrap.svg", class:"skill-set img-thumbnail"%>
+          <p>Bootstrap</p>
+        </div>
+      </div>
+    <h4>Back End</h4>
+      <div class="row">
+        <div class="col-4 col-lg-2">
+          <%=image_tag "ruby.svg", class:"skill-set img-thumbnail"%>
+          <p>Ruby</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "rails.svg", class:"skill-set img-thumbnail"%>
+          <p>Rails</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "sql.svg", class:"skill-set img-thumbnail"%>
+          <p>SQL</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "postgresql.svg", class:"skill-set img-thumbnail"%>
+          <p>Postgresql</p>
+        </div>    
+      </div>
+    <h4>Others</h4>
+      <div class="row">
+        <div class="col-4 col-lg-2">
+          <%=image_tag "git.svg", class:"skill-set img-thumbnail"%>
+          <p>Git</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "github.svg", class:"skill-set img-thumbnail"%>
+          <p>Github</p>
+        </div>
+        <div class="col-4 col-lg-2">
+          <%=image_tag "heroku.svg", class:"skill-set img-thumbnail"%>
+          <p>Heroku</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="section-3 align-center">
+  <h1>I Know How To..</h1>
+
+  <div class="container">
+
+    <div class= "row">
+      <div class="col-12 mt-5 mb-5">
+        <h3>Set up live updating functions such as instant message, chatrooms and notifications.</h3><br><br>
+        <%=link_to "https://baobaocare.herokuapp.com/chatrooms/21", target: :_blank do%>
+          <%=image_tag "chat2.png" , class:"img-thumbnail know-how"%>
+        <%end%>
+      </div>
+
+      <div class="col-12 mt-5 mb-5">
+        <h3>Set up map and labeling functions</h3><br><br>
+        <%=link_to "http://billboard-air.herokuapp.com/billboards", target: :_blank do%>
+          <%=image_tag "google-map.png" , class:"img-thumbnail know-how"%>
+        <%end%>
+      </div>
+      <div class="col-12 mt-5 mb-5">
+        <h3>Set up server either using AWS, Heroku, or personal web server.</h3><br><br>
+        <%=image_tag "aws.svg", class:"skill-set img-thumbnail"%>
+        <%=image_tag "heroku.svg", class:"skill-set img-thumbnail"%>
+        <%=image_tag "ubuntu.svg", class:"skill-set img-thumbnail"%>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="section-4 align-center">
+  <h1>My Works</h1>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <%=link_to "https://baobaocare.herokuapp.com", target: :_blank do%>
+          <%=image_tag "baobaocare3.png" , class:"img-thumbnail my-work"%>
+        <%end%>
+      </div>
+      <div class="col-12 col-lg-6">
+        <%=link_to "https://billboard-air.herokuapp.com", target: :_blank do%>
+          <%=image_tag "billboard-air3.png" , class:"img-thumbnail my-work"%>
+        <%end%>       
+      </div>
+    </div>
+  </div>  
+</div>
+
+<div id="contact-me" name="contact-me" class="section-5">
+  <div class="container border p-5">
+    <h1>Contact Me</h1>
+    <%=form_tag email_path, method: :post, class:"email-form" do%>
+      <div class="form-group ">
+        <strong> <%=label_tag "Your email address", nil, class:"email-label"%></strong><br>
+        <%=text_field_tag :email, nil, class:"form-control"%>
+      </div>
+      <div>
+        <strong> <%=label_tag "Your name", nil, class:"email-label"%></strong><br>
+        <%=text_field_tag :name, nil, class:"form-control"%>
+      </div>
+      <div>
+        <strong> <%=label_tag "Your message", nil, class:"email-label"%></strong><br>
+        <%=text_area_tag :message, nil, class:"form-control"%>
+      </div>
+      <br>
+      <%=submit_tag "Send", class:"btn btn-light btn-lg btn-block"%>
+    <%end%>
+  </div>
+</div>

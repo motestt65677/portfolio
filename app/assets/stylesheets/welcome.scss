@@ -1,0 +1,87 @@
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.section-1{
+  height: 40em;
+  background-color: black;
+  color: white;
+  padding: 5vh;
+}
+
+.section-2{
+  height: 60em;
+  padding: 5vh;
+}
+
+.section-3{
+  height: 150em;
+  background-color: black;
+  color: white;
+  padding: 5vh;  
+}
+
+.section-4{
+  height: 60em;
+  padding: 5vh;
+}
+
+.section-5{
+  height: 40em;
+  background-color: black;
+  color: white;
+  padding: 5vh;
+}
+
+
+.profile-pic{
+  width: 100%;
+  max-width: 20em;
+  height: auto;
+  border-radius: 5em;
+
+}
+.align-center{
+  text-align: center;
+}
+.skill-set{
+  width: 5em;
+}
+
+.my-work{
+  border-radius: 2em;
+  width: 100%;
+  max-width: 20em;
+  height: auto;
+}
+
+.know-how{
+  height: 60%;
+  width: auto;
+}
+
+.hr-white{
+  border-color: white;
+  width: 60%;
+}
+
+a{
+  color: gray;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:hover{
+  color: white;
+}
+
+.email-form{
+}
+
+.email-label{
+  font-size:1.5em;
+}
+
+.alert{
+  margin: 0;
+}
