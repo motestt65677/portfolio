@@ -12,5 +12,11 @@ class WelcomeController < ApplicationController
       redirect_to "/"
     end
   end
-
+  def track
+    visit = Visit.new(url: request.original_url, controller: params[:controller], action: params[:action], description: params[:track])
+    visit.save
+  end
+  def visit_log
+    @visits = Visit.all
+  end
 end

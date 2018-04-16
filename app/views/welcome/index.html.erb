@@ -4,8 +4,8 @@
       <div class="col-12">
         <h1>David Cheng</h1>
         <h5>Full Stack Web Developer</h5>
-        <%= link_to 'Resume', 'davidchengresume-april.pdf', download: 'davidchengresume-april.pdf', class:"col-6 col-lg-3"%>
-        <a class="col-6 col-lg-3" href="#contact-me">Contact me</a>
+        <%= link_to 'Resume', 'davidchengresume-april.pdf', download: 'davidchengresume-april.pdf', class:"col-6 col-lg-3", id:"resume-link"%>
+        <a class="col-6 col-lg-3" href="#contact-me" id="contact-me-link">Contact me</a>
       </div>
       <div class="col-12 mt-3"> 
         <%=image_tag "david.jpg", class:"profile-pic img-thumbnail"%>
@@ -79,6 +79,10 @@
   </div>
 </div>
 
+<%=form_tag "/track", id: "track1", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="bottom of My Skills section of portfolio">
+<%end%>
+
 <div class="section-3 align-center">
   <h1>I Know How To..</h1>
 
@@ -113,24 +117,34 @@
   </div>
 </div>
 
+<%=form_tag "/track", id: "track2", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="bottom of I Know How To section of portfolio">
+<%end%>
+
+
 <div class="section-4 align-center">
   <h1>My Works</h1>
   <hr>
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-6">
-        <%=link_to "https://baobaocare.herokuapp.com", target: :_blank do%>
+        <%=link_to "https://baobaocare.herokuapp.com", target: :_blank, id:"baobaocare-link" do%>
           <%=image_tag "baobaocare3.png" , class:"img-thumbnail my-work"%>
         <%end%>
       </div>
       <div class="col-12 col-lg-6">
-        <%=link_to "https://billboard-air.herokuapp.com", target: :_blank do%>
+        <%=link_to "https://billboard-air.herokuapp.com", target: :_blank, id:"billboard-air-link" do%>
           <%=image_tag "billboard-air3.png" , class:"img-thumbnail my-work"%>
         <%end%>       
       </div>
     </div>
   </div>  
 </div>
+
+<%=form_tag "/track", id: "track3", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="bottom of My Work section of portfolio">
+<%end%>
+
 
 <div id="contact-me" name="contact-me" class="section-5">
   <div class="container border p-5">
@@ -152,4 +166,21 @@
       <%=submit_tag "Send", class:"btn btn-light btn-lg btn-block"%>
     <%end%>
   </div>
+<%=form_tag "/track", id: "track4", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="bottom of Contact Me section of portfolio">
+<%end%>
+<%=form_tag "/track", id: "resume-track", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="resume has been downloaded">
+<%end%>
+<%=form_tag "/track", id: "contact-me-track", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="contact me button has been clicked">
+<%end%>
+<%=form_tag "/track", id: "baobaocare-track", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="linked to baobaocare">
+<%end%>
+<%=form_tag "/track", id: "billboard-air-track", method: :post, remote: true,:authenticity_token => true do%>
+  <input type="hidden" name="track" value="linked to billboard-air">
+<%end%>
 </div>
+
+
