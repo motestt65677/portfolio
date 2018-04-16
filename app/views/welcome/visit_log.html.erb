@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Visit Log</h1>
+  <table> 
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Description</th>
+    </tr> 
+  <%@visits.each do |visit|%>
+    <tr>
+      <td><%=visit.created_at.strftime("%m/%d/%y")%></td>
+      <td><%=visit.created_at.strftime("%I:%M %p")%></td>
+      <td><%=visit.description%></td>
+    </tr>
+  <%end%>
+  </table>
+
+</div>
