@@ -14,21 +14,14 @@ body{
 }
 
 .section-3{
-  height: 150em;
+  height: 80em;
   background-color: black;
   color: white;
   padding: 5vh;  
 }
 
 .section-4{
-  height: 60em;
-  padding: 5vh;
-}
-
-.section-5{
-  height: 40em;
-  background-color: black;
-  color: white;
+  height: 35em;
   padding: 5vh;
 }
 
@@ -50,7 +43,7 @@ body{
 .my-work{
   border-radius: 2em;
   width: 100%;
-  max-width: 20em;
+  max-width: 15em;
   height: auto;
 }
 
@@ -93,4 +86,13 @@ table, th, td{
 
 th, td {
     padding: 15px;
+}
+
+.white-hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
 }

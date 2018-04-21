@@ -41,19 +41,6 @@ $( document ).ready(function() {
     }
   });
 
-  var mark4 = 0;
-  $(window).scroll(function() {
-    var hT = $('#track4').offset().top,
-    hH = $('#track4').outerHeight(),
-    wH = $(window).height(),
-    wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH) && mark4 == 0){
-      var form = document.getElementById("track4")
-      form.submit();
-      mark4 = 1;
-      console.log("in4");
-    }
-  });
 
   document.getElementById("resume-link").onclick = function(){
     document.getElementById("resume-track").submit();
@@ -67,5 +54,10 @@ $( document ).ready(function() {
   }
   document.getElementById("billboard-air-link").onclick = function(){
     document.getElementById("billboard-air-track").submit();
+  }
+
+  document.getElementById("tic-tac-toe-link").onclick = function(){
+    document.getElementById("tic-tac-toe-track").submit();
+    console.log("tictactoelink");
   }
 });
