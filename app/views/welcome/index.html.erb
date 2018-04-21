@@ -84,32 +84,34 @@
 <%end%>
 
 <div class="section-3 align-center">
-  <h1>My Works</h1>
-  <hr class="white-hr">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <%=link_to "https://baobaocare.herokuapp.com", target: :_blank, id:"baobaocare-link" do%>
-          <%=image_tag "baobaocare3.png" , class:"img-thumbnail my-work"%>
-          <p>BaoBaoCare</p>
-        <%end%>
-      </div>
-      <div class="col-12 col-md-4">
-        <%=link_to "https://billboard-air.herokuapp.com", target: :_blank, id:"billboard-air-link" do%>
-          <%=image_tag "billboard-air3.png" , class:"img-thumbnail my-work"%>
-          <p>Billboard Air</p>
-        <%end%>       
-      </div>
+    <h1>My Works</h1>
+    <hr class="white-hr">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <%=link_to "https://baobaocare.herokuapp.com", target: :_blank, id:"baobaocare-link" do%>
+            <%=image_tag "baobaocare3.png" , class:"img-thumbnail my-work"%>
+            <p>BaoBaoCare</p>
+          <%end%>
+        </div>
+        <div class="col-12 col-md-4">
+          <%=link_to "https://billboard-air.herokuapp.com", target: :_blank, id:"billboard-air-link" do%>
+            <%=image_tag "billboard-air3.png" , class:"img-thumbnail my-work"%>
+            <p>Billboard Air</p>
+          <%end%>       
+        </div>
 
-      <div class="col-12 col-md-4">
-        <%=link_to "https://tictactoe33.herokuapp.com", target: :_blank, id:"tic-tac-toe-link" do%>
-          <%=image_tag "tic-tac-toe.png" , class:"img-thumbnail my-work"%>
-          <p>Tic Tac Toe</p>
-        <%end%>       
-      </div>
+        <div class="col-12 col-md-4">
+          <%=link_to "https://tictactoe33.herokuapp.com", target: :_blank, id:"tic-tac-toe-link" do%>
+            <%=image_tag "tic-tac-toe.png" , class:"img-thumbnail my-work"%>
+            <p>Tic Tac Toe</p>
+          <%end%>       
+        </div>
 
+      </div>
     </div>
-  </div>  
+  </div>    
 </div>
 
 <%=form_tag "/track", id: "track2", method: :post, remote: true,:authenticity_token => true do%>
